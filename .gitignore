@@ -1,0 +1,7 @@
+out
+node_modules
+.vscode
+.vscode-test/
+*.vsix
+dist/bundle.js
+.DS_Store
