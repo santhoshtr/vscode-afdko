@@ -1,0 +1,95 @@
+{
+    ".source.fea": {
+        "anonymous": {
+            "prefix": "anon",
+            "body": "anonymous ${1:xxxx} {\n\t$2\n} ${1/\\s.*//};\n"
+        },
+        "class": {
+            "prefix": "@",
+            "body": "@${1:ClassName} = [${2:Contents}];$0"
+        },
+        "feature": {
+            "prefix": "feature",
+            "body": "feature ${1:xxxx} {\n\tsub $2 by $3 ;\n} ${1/\\s.*//};"
+        },
+        "lookup": {
+            "prefix": "lookup",
+            "body": "lookup ${1:xxxx} {\n\t$2\n} ${1/\\s.*//};",
+            "description": "Lookup block"
+        },
+        "substitute": {
+            "prefix": "sub",
+            "body": "sub ${1:a} by ${2:A.sc};",
+            "description": "Single substitution rule"
+        },
+        "table": {
+            "prefix": "table",
+            "body": "table ${1:GDEF} {\n\t$2\n} ${1/\\s.*//};",
+            "description": "Table Block"
+        },
+        "ignore": {
+            "prefix": "ignore",
+            "body": "ignore sub ${1:prefix} ${2:context}' ${4:suffix};",
+            "description": "Exception to chaining Rule"
+        },
+        "markClass": {
+            "prefix": "markClass",
+            "body": "markClass [${1:acute grave dieresis}] <anchor ${2:0 0}> @${3:MARK_TOP_ACCENTS};",
+            "description": "markClass definition"
+        },
+        "subligature": {
+            "prefix": "subligature",
+            "body": "sub ${1:f} ${2:i} by ${3:f_i};",
+            "description": "Ligature substitution rule"
+        },
+        "subcontext": {
+            "prefix": "subcontext",
+            "body": "sub ${1:prefix} ${2:context}' ${3:lookup Foo} ${4:suffix};"
+        },
+        "languagesystem": {
+            "prefix": "languagesystem",
+            "body": "languagesystem ${1:DFLT} ${2:dflt};",
+            "description": "languagesystem declaration"
+        },
+        "pos": {
+            "prefix": "pos",
+            "body": "pos ${1:glyph} <${2:0 0 0 0}>;",
+            "description": "Single Positioning Rule"
+        },
+        "posbase": {
+            "prefix": "posbase",
+            "body": "pos base ${1:glyph} <anchor ${2:0 0}> mark @${3:TOP_MARKS};",
+            "description": "Mark-to-Base Positioning Rule"
+        },
+        "poscontext": {
+            "prefix": "poscontext",
+            "body": "pos ${1:prefix} ${2:context}' ${3:lookup Foo} ${4:suffix};",
+            "description": "Chaining Contextual Positioning Rule"
+        },
+        "poscursive": {
+            "prefix": "poscursive",
+            "body": "pos cursive ${1:glyph} <anchor ${2:0 0}> <anchor ${3:0 0}>;",
+            "description": "Cursive Positioning Rule"
+        },
+        "poslig": {
+            "prefix": "poslig",
+            "body": "pos ligature ${1:f_i} <anchor ${2:0 0}> mark @${3:TOP_MARKS} ligComponent <anchor ${4:0 0}> mark @${5:TOP_MARKS};",
+            "description": "Ligature Positioning Rule"
+        },
+        "posmkmk": {
+            "prefix": "posmkmk",
+            "body": "pos mark ${1:acute} <anchor ${2:0 0}> mark @${3:TOP_MARKS};",
+            "description": "Mark-To-Mark Positioning Rule"
+        },
+        "poskern": {
+            "prefix": "poskern",
+            "body": "pos ${1:A} ${2:V} ${3:-100};",
+            "description": "Pair Positioning Rule Format B"
+        },
+        "subalternate": {
+            "prefix": "subalternate",
+            "body": "sub ${1:a} from [${2:a.1 a.2}];",
+            "description": "Alternate substitution rule"
+        }
+    }
+}

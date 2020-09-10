@@ -1,8 +1,8 @@
 {
     "name": "vscode-afdko",
     "displayName": "vscode-afdko",
-    "description": "Syntax highlighting for OpenType feature files in the Adobe \"AFDKO\" format",
-    "version": "0.0.1",
+    "description": "Syntax highlighting and code snippets for OpenType feature files in the Adobe \"AFDKO\" format",
+    "version": "0.0.2",
     "publisher": "santhoshthottingal",
     "repository": {
 		"type": "git",
@@ -25,6 +25,10 @@
             "language": "afdko",
             "scopeName": "source.fea",
             "path": "./syntaxes/afdko.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "afdko",
+            "path": "./snippets/snippets.json"
         }]
     }
 }
